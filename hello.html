@@ -3,34 +3,98 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="doStartClock()">
+  <p id="timePar" style="font-size:10em;font-family: 'Courier New', Courier, monospace;text-align: center;">00:00:00
+  </p>
   <script>
     function doAddition(no1Number, no2Number) {
       let result = no1Number + no2Number;
       alert("Result: " + result);
     }
-  </script>
-<h1>Begin to code with JavaScript</h1>
-<h2>Hello for Liu kai</h2>
-<p>Welcome to Begin to code with JavaScript.</p>
-<p>This page has hidden secrets!</p>
-<p>Press function key F12 to investigate.</p>
-<em>This text is emphasized.</em> This text is not.<br>
-This is <em>emphasized</em><br>
-This is <i>italic</i><br>
-This is <strong>strong</strong><br>
-This is <b>bold</b><br>
-This is <small>small</small><br>
-This is <del>deleted</del><br>
-This is <ins>inserted</ins><br>
-This is <u>underlined</u><br>
-This is <mark>marked</mark><br>
-<em>This is emphasized <strong>This is strong and emphasized</strong></em><br>
-This is a less than: &lt; symbol and this is a greater than &gt; symbol<br>
-This is an ampersand :&amp;<br>
-&Eacute;<br>   &eacute;<br>
-Happy face:&#128540;<br>
-<img src="seaside.png" width="400">
+    function doSayHello(){
+      alert("你好，欢迎光临！");
+    }
+    function doShowAlert(){
+      var element = document.getElementById("alertInputText");alert(element.value);
+    }
+    function SayHello(){
+      alert("19273098436");
+    }
+    function doHello(){
+      alert("2024/10/7创建该网页");
+    }
+    function doEndTimer(){
+      alarmSoundElement = document.getElementById("alarmAudio");
+      alarmSoundElement.play();
+    }
+    function doStartClock() {
+            setInterval(doClockTick, 1000);
+        }
 
+        function doClockTick() {
+            var currentDate = new Date();
+            var hours = currentDate.getHours();
+            var mins = currentDate.getMinutes();
+            var secs = currentDate.getSeconds();
+            var timeString = hours + ":" + mins + ":" + secs;
+
+            var outputElement = document.getElementById("timePar");
+            outputElement.textContent = timeString;
+        }
+  </script>
+<p style="color: red">-----上面的时钟现在还不知开发原理-----</p>
+<h1>刘凯的第三个网页</h1>
+<h2>Happy face:&#128541;&#128538;&#128537;&#128538;&#128537;&#128538;&#128537;&#128541;</h2>
+<p>
+  <input type="text" id="alertInputText" value="">
+  <button onclick="doShowAlert();">输入什么按下后显示什么</button>
+</p>
+<button onclick="doSayHello();">只会显示“你好，欢迎光临！”</button>
+<button onclick="SayHello();">我的手机号码</button>
+<button onclick="doHello();">创建该网页的时间</button>
+<pre><h2>
+         九月九日忆山东兄弟
+                              王维〔唐代〕
+独在异乡为异客，每逢佳节倍思亲。
+遥知兄弟登高处，遍插茱萸少一人。
+</pre></h2>
+<img src="九月九日忆山东兄弟.png" ><br>
+<audio controls>
+  <source src="《九月九日忆山东兄弟》朗读音频.mp3" type="audio/mpeg">
+</audio>
+<pre><h2>                  临安春雨初霁
+                            陆游〔宋代〕
+  世味年来薄似纱，谁令骑马客京华。
+  小楼一夜听春雨，深巷明朝卖杏花。
+  矮纸斜行闲作草，晴窗细乳戏分茶。
+  素衣莫起风尘叹，犹及清明可到家。</h2></pre>
+  <img src="临安春雨初霁.png"><br>
+  <audio controls>
+    <source src="临安春雨初霁.mp3" type="audio/mpeg">
+  </audio>
+<pre><h2>                  春江花月夜
+                              张若虚〔唐代〕
+  春江潮水连海平，海上明月共潮生。
+  滟滟随波千万里，何处春江无月明。
+  江流宛转绕芳甸，月照花林皆似霰。
+  空里流霜不觉飞，汀上白沙看不见。
+  江天一色无纤尘，皎皎空中孤月轮。
+  江畔何人初见月？江月何年初照人？
+  人生代代无穷已，江月年年望相似。
+  不知江月待何人，但见长江送流水。
+  白云一片去悠悠，青枫浦上不胜愁。
+  谁家今夜扁舟子？何处相思明月楼？
+  可怜楼上月裴回，应照离人妆镜台。
+  玉户帘中卷不去，捣衣砧上拂还来。
+  此时相望不相闻，愿逐月华流照君。
+  鸿雁长飞光不度，鱼龙潜跃水成文。
+  昨夜闲潭梦落花，可怜春半不还家。
+  江水流春去欲尽，江潭落月复西斜。
+  斜月沉沉藏海雾，碣石潇湘无限路。
+  不知乘月几人归，落月摇情满江树。</h2></pre>
+  <img src="春江花月夜.png"><br>
+  <audio controls>
+    <source src="春江花月夜.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
